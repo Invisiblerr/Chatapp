@@ -15,10 +15,11 @@ public class ChatServer {
             System.out.println("Server started");
             while (true) {
                 Socket socket = serverSocket.accept();
-                ServerThread userThread = new ServerThread(socket);
+                ServerThread userThread = new ServerThread(socket,users);
                 System.out.println("user connected");
                 userThread.start();
                 users.add(userThread);
+
             }
         } catch (IOException e) {
             e.printStackTrace();

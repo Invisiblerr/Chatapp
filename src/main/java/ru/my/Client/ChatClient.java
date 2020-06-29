@@ -24,6 +24,7 @@ public class ChatClient {
 
                 String message = scan.nextLine();
                 writer.println(message);
+
                 InputStream input = socket.getInputStream();
                 BufferedReader reader = new BufferedReader(new InputStreamReader(input));
 
